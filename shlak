@@ -1,0 +1,10 @@
+ def addTable(self):
+        f = open('graphics.txt', mode="r")
+        data = f.read()
+        graphics = data.split('\n')
+        f.close()
+        f = open('graphics.txt', mode="a")
+        if self.input_function_line.toPlainText() not in graphics:
+            f.write(self.input_function_line.toPlainText())
+            cl = True
+        f.close()
