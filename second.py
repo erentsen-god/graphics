@@ -56,7 +56,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.companovka_for_mpl.addWidget(self.toolbar)
 
         self.pushButton.clicked.connect(self.plot_function)
-        self.pushButton_2.clicked.connect(self.dlete)
+
 
 
     def plot_function(self):
@@ -66,26 +66,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
                                                  legend=self.graph_legend,
                                                  limits=[int(self.ox_0.displayText()), int(self.ox_2.displayText())])
         self.fig.canvas.draw()
-        f = open('graphics.txt', mode="r")
-        data = f.read()
-        graphics = data.split('\n')
-        f.close()
-        f = open('graphics.txt', mode="a")
-        if self.input_function_line.toPlainText() not in graphics:
-            f.write(self.input_function_line.toPlainText() + '\n')
-            graphics.append(self.input_function_line.toPlainText())
-        f.close()
-        self.plainTextEdit.clear()
-        for i in graphics:
-            self.plainTextEdit.appendPlainText(i)
+        self.plainTextEdit.appendPlainText(self.input_function_line.toPlainText())
 
-
-    def dlete(self):
-        f = open('graphics.txt', mode='w')
-        f.write('')
-        f.close()
-        self.plainTextEdit.clear()
-        pylab.
 
 
 class MyMplCanvas(FigureCanvasQTAgg):
@@ -110,4 +92,3 @@ def except_hook(cls, exception, traceback):
 
 if __name__ == '__main__':
     main_application()
-

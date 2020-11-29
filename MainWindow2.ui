@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Графики</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QWidget" name="horizontalLayoutWidget_3">
@@ -124,6 +124,17 @@
            </item>
           </layout>
          </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_4">
+         <item>
+          <widget class="QLabel" name="label_4">
+           <property name="text">
+            <string>y(x) =</string>
+           </property>
+          </widget>
+         </item>
          <item>
           <widget class="QTextEdit" name="input_function_line">
            <property name="sizePolicy">
@@ -203,13 +214,6 @@
        </item>
        <item>
         <widget class="QPlainTextEdit" name="plainTextEdit"/>
-       </item>
-       <item>
-        <widget class="QPushButton" name="pushButton_2">
-         <property name="text">
-          <string>Удалить все графики</string>
-         </property>
-        </widget>
        </item>
       </layout>
      </item>
