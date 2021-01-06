@@ -127,7 +127,7 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "Графики"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "blyaaaaa"))
         self.label.setText(_translate("MainWindow", "по осям ox --от"))
         self.label_2.setText(_translate("MainWindow", "по осям  -- --- до"))
         self.ox_0.setText(_translate("MainWindow", "0"))
